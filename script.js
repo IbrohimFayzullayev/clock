@@ -21,7 +21,7 @@ setInterval(function () {
   time.textContent = uz;
   let degreSec = d.getSeconds() * 6;
   let degMin = d.getMinutes() * 6;
-  let degHour = d.getHours() * 6;
+  let degHour = d.getHours() * 10 + d.getMinutes() / 10;
   sec.style.webkitTransform = "rotate(" + degreSec + "deg)";
   min.style.webkitTransform = "rotate(" + degMin + "deg)";
   h.style.webkitTransform = "rotate(" + degHour + "deg)";
