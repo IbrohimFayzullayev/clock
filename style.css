@@ -12,8 +12,7 @@ body {
 .clock {
   width: 20rem;
   height: 20rem;
-  margin: 10rem auto;
-  background-color: aqua;
+  margin: 4rem auto;
   border-radius: 50%;
   position: relative;
 }
@@ -29,30 +28,52 @@ body {
   outline-style: solid;
   outline-color: red;
   outline-width: 0.3rem;
+  z-index: 10;
 }
 .line {
-  height: 0.4rem;
-  width: 9rem;
+  width: 0.4rem;
+  height: 9rem;
   position: absolute;
+  border-radius: 1rem;
 }
 .black__line {
   background-color: #000;
 }
 .red__line {
   background-color: red;
-  transform: rotate(90deg);
-  top: 23.5%;
-  left: 27%;
-}
-.minute {
-  position: absolute;
-  top: 49%;
-  left: 7%;
-  width: 8rem;
+  top: 5.5%;
+  left: 48.8%;
+  transform-origin: bottom;
 }
 .hour {
   position: absolute;
-  top: 42%;
-  transform-origin: 128% 100%;
-  transform: rotate(-100deg);
+  top: 14.5%;
+  left: 48.4%;
+  width: 0.6rem;
+  height: 7rem;
+  transform-origin: bottom;
+}
+.minute {
+  position: absolute;
+  top: 5%;
+  left: 48.5%;
+  transform-origin: bottom;
+}
+.time {
+  text-align: center;
+  font-size: 2.4rem;
+}
+.btn {
+  margin: 0 auto;
+  width: 10rem;
+  margin-top: 9rem;
+}
+.dark__btn {
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  background-color: #000;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
 }
