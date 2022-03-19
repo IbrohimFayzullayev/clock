@@ -17,7 +17,7 @@ setInterval(function () {
     minute: "numeric",
     second: "numeric",
   };
-  let uz = new Intl.DateTimeFormat("en-En", options).format(d);
+  let uz = new Intl.DateTimeFormat("ru-RU", options).format(d);
   time.textContent = uz;
   let degreSec = d.getSeconds() * 6;
   let degMin = d.getMinutes() * 6;
