@@ -21,10 +21,16 @@ setInterval(function () {
   time.textContent = uz;
   let degreSec = d.getSeconds() * 6;
   let degMin = d.getMinutes() * 6;
-  let degHour = d.getHours() * 10 + d.getMinutes() / 10;
+  let dH;
+  if (d.getHours() > 12) {
+    let a = d.getHours() - 12;
+    dH = 30 * a + d.getMinutes() / 2;
+  } else {
+    dH = 30 * d.getHours() + d.getMinutes() / 2;
+  }
   sec.style.webkitTransform = "rotate(" + degreSec + "deg)";
   min.style.webkitTransform = "rotate(" + degMin + "deg)";
-  h.style.webkitTransform = "rotate(" + degHour + "deg)";
+  h.style.webkitTransform = "rotate(" + dH + "deg)";
 }, 1000);
 let check = true;
 dark.addEventListener("click", function () {
